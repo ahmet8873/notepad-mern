@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createNote } from "../redux-toolkit/noteSlice";
 
-const GoalForm = () => {
+const NoteForm = () => {
   const [text, setText] = useState("");
 
   const dispatch = useDispatch();
@@ -35,4 +35,4 @@ const GoalForm = () => {
   );
 };
 
-export default GoalForm;
+export default NoteForm;
