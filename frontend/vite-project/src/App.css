@@ -164,6 +164,11 @@ h3 {
   cursor: pointer;
   text-align: center;
 }
+.logout-btn {
+  background-color: white;
+  color: #703410;
+  border: none;
+}
 
 .btn svg {
   margin-right: 8px;

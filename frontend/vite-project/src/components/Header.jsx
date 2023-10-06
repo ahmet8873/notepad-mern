@@ -1,4 +1,4 @@
-import { FaSignOutAlt } from "react-icons/fa";
+import { RiLogoutBoxRFill } from "react-icons/ri";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { AiOutlineLogin } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,8 +23,8 @@ const Header = () => {
       <ul>
         {user ? (
           <li>
-            <button className="btn" onClick={onLogout}>
-              <FaSignOutAlt />
+            <button className="btn logout-btn" onClick={onLogout}>
+              <RiLogoutBoxRFill />
               Logout
             </button>
           </li>
