@@ -9,6 +9,7 @@
 body {
   font-family: "Caveat", cursive;
   height: 100vh;
+  background-color: #ece7f3;
 }
 .logo {
   font-size: 3rem;
@@ -41,9 +42,11 @@ h3 {
 .container {
   width: 100%;
   max-width: 720px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  background-color: white;
 }
 
 .header {

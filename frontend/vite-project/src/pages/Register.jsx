@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register } from "../redux-toolkit/authSlice";
+import mySvg from "../assets/notes2.svg";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -49,6 +50,9 @@ const Register = () => {
   };
   return (
     <>
+      <section className="svg-image">
+        <img style={{ height: "20vh" }} src={mySvg} alt="mysvg" />
+      </section>
       <section className="heading">
         <h1>
           <SiGnuprivacyguard></SiGnuprivacyguard>Register

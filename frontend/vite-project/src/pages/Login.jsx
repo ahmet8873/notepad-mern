@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { AiOutlineLogin } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import { login } from "../redux-toolkit/authSlice";
+import mySvg from "../assets/notes.svg";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +43,9 @@ const Login = () => {
 
   return (
     <>
+      <section className="svg-image">
+        <img style={{ height: "20vh" }} src={mySvg} alt="mysvg" />
+      </section>
       <section className="heading">
         <h1>
           <AiOutlineLogin></AiOutlineLogin>Login
