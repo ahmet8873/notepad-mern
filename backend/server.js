@@ -5,6 +5,7 @@ const connectToDatabase = require("./config/dbConfig");
 const noteRoutes = require("./routes/noteRoutes");
 const userRoutes = require("./routes/userRoutes");
 const { errorHandler } = require("./middlewares/errorMiddleware");
+const path = require("path");
 
 connectToDatabase();
 
