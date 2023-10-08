@@ -20,11 +20,11 @@ App.use(cors());
 App.use("/api/notes", noteRoutes);
 App.use("/api/users", userRoutes);
 
-App.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "../frontend/vite-project", "dist", "index.html")
-  );
-});
+App.use(
+  express.static(
+    "/Users/ahmetavci/Desktop/hyf/MERN-STACK-PROJECT/frontend/vite-project/dist"
+  )
+);
 // I am using my custom error handler middleware
 App.use(errorHandler);
 
