@@ -3,9 +3,6 @@ const User = require("../models/userModel");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// @description register new user
-// @route  post /api/users
-// @access public
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
@@ -13,14 +10,12 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("please add all fields");
   }
 
-  //   check if user exists
   const userExists = await User.findOne({ email });
   if (userExists) {
     res.status(400);
     throw new Error("user already exists with this email!");
   }
 
-  //   hash password
   const salt = await bcryptjs.genSalt(10);
   const hashedPassword = await bcryptjs.hash(password, salt);
 
@@ -43,9 +38,6 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
-// @description login new user
-// @route  post /api/users/login
-// @access public
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -64,7 +56,6 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
-// generate token (jwt)
 const generateToken = (userId) => {
   const payload = {
     id: userId,

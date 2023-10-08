@@ -12,12 +12,4 @@ const {
 router.route("/").get(protect, getNotes).post(protect, createNote);
 router.route("/:id").put(protect, updateNote).delete(protect, deleteNote);
 
-// router.get("/", getNotes);
-
-// router.post("/", setNote);
-
-// router.put("/:id", updateNote);
-
-// router.delete("/:id", deleteNote);
-
 module.exports = router;
