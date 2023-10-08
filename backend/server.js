@@ -22,7 +22,7 @@ App.use("/api/users", userRoutes);
 
 App.get("*", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "frontend/vite-project", "dist", "index.html")
+    path.join(__dirname, "../frontend/vite-project", "dist", "index.html")
   );
 });
 // I am using my custom error handler middleware
