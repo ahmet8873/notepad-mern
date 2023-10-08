@@ -20,6 +20,14 @@ App.use(cors());
 App.use("/api/notes", noteRoutes);
 App.use("/api/users", userRoutes);
 
+// Serve static files from the "dist" directory inside your frontend folder
+App.use(express.static(path.join(__dirname, "frontend", "dist")));
+
+// Handle all other routes by serving the index.html file
+App.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
+
 // I am using my custom error handler middleware
 App.use(errorHandler);
 
