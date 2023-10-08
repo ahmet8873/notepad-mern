@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+const url = "https://notepad-backend-r9il.onrender.com";
 // get user from localstorage
 const user = JSON.parse(localStorage.getItem("user"));
 
@@ -14,10 +15,7 @@ export const register = createAsyncThunk(
   "auth/register",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/users",
-        user
-      );
+      const response = await axios.post(`${url}/api/users`, user);
       if (response.data) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
@@ -41,10 +39,7 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 // login
 export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   try {
-    const response = await axios.post(
-      "http://localhost:5000/api/users/login",
-      user
-    );
+    const response = await axios.post(`${url}/api/users/login`, user);
     if (response.data) {
       localStorage.setItem("user", JSON.stringify(response.data));
     }
