@@ -8,7 +8,7 @@ import { store } from "./redux-toolkit/store.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/notepad-o7jm">
+    <BrowserRouter>
       <Provider store={store}>
         <App />
       </Provider>
