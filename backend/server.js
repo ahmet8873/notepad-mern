@@ -8,7 +8,7 @@ const { errorHandler } = require("./middlewares/errorMiddleware");
 
 connectToDatabase();
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 const App = express();
 
@@ -27,6 +27,6 @@ App.get("*", (req, res) => {
 // I am using my custom error handler middleware
 App.use(errorHandler);
 
-App.listen(port, () => {
-  console.log(`server running port : ${port}`);
+App.listen(PORT, () => {
+  console.log(`server running port : ${PORT}`);
 });
