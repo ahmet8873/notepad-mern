@@ -1,10 +1,10 @@
 
 build/
-dist/
+frontend/dist/
 
 
 .idea/
 .vscode/
 
 
-.env
+backend/.env
