@@ -1,10 +1,2 @@
-
-build/
-frontend/dist/
-
-
-.idea/
-.vscode/
-
-
-backend/.env
+**/.env
+frontend/vite-project/dist/
