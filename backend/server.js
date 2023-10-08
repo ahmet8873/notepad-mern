@@ -25,7 +25,9 @@ App.use(express.static(path.join(__dirname, "frontend", "dist")));
 
 // Handle all other routes by serving the index.html file
 App.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "..", "..", "frontend", "dist", "index.html")
+  );
 });
 
 // I am using my custom error handler middleware
