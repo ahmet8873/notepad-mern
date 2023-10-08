@@ -6,7 +6,8 @@
   "scripts": {
     "server": "cd backend && npm run dev",
     "start-frontend": "cd frontend/vite-project && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run start-frontend\""
+    "dev": "concurrently \"npm run server\" \"npm run start-frontend\"",
+    "build": "cd backend && npm install && cd ../frontend && npm install &&npm run build"
   },
   "keywords": [],
   "author": "",
